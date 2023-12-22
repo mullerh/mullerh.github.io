@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Herman Muller</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .nested-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .gallery-item-quarter {
+        padding: 1%;
+        flex-basis: calc(25% - 2%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery-item-half {
+        padding: 1%;
+        flex-basis: calc(50% - 2%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery-item-full {
+        flex-basis: calc(100%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery-caption {
+        margin-top: 10px;
+        color: lightslategrey;
+        font-size: 16px;
+        text-align: left;
+    }
+    img, video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .back-button {
+        top: 10px;
+        left: 10px;
+    }
+    .back-button a {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        font-size: 20px;
+    }
+    .back-button a:hover {
+        background-color: rebeccapurple;
+        transform: scale(1.1);
+    }
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16 times 100) */
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <a href="index.html">Back</a>
+        </div>
+        <section class="project">
+            <h2>3D Pixel Art Pipeline (AKA Rat Game)</h2>
+
+            <p>Trailer</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/lzcgCclYAKM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <p>Procedurally generates caves and populates caves with game objects</p>
+            <div class="gallery">
+                <div class="gallery-item-half">
+                    <img src="balloonium-procedural.png">
+                    <p class="gallery-caption">Procedurally generated caves with 2 types of worlds</p>
+                </div>
+
+                <div class="gallery-item-half">
+                    <img src="a-star.png">
+                    <p class="gallery-caption">A* dead end detection and pathing, and asset placement</p>
+                </div>
+            </div> 
+
+            <p>Particle system adaptable to many use cases</p>
+            <div class="gallery">
+                <div class="gallery-item-quarter">
+                    <img src="particles-1.png">
+                    <p class="gallery-caption">Fairy lights following A* path</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="particles-2.gif">
+                    <p class="gallery-caption">Particle based enemies</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="particles-3.gif">
+                    <p class="gallery-caption">Smoke particles refueling</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="particles-4.gif">
+                    <p class="gallery-caption">Supports hundreds of thousands of particles</p>
+                </div>
+            </div>
+
+            <p>Screenspace collision detection with compute shader to efficiently detect player collisions against arbitrarily complex geometry</p>
+            <div class="gallery">
+                <div class="gallery-item-quarter">
+                    <img src="screenspace-collision-1.png">
+                    <p class="gallery-caption">Pre-render collider draw pass</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="screenspace-collision-2.png">
+                    <p class="gallery-caption">Collision detection - GPU</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="screenspace-collision-3.png">
+                    <p class="gallery-caption">Regular render pass</p>
+                </div>
+
+                <div class="gallery-item-quarter">
+                    <img src="screenspace-collision-4.gif">
+                    <p class="gallery-caption">Collision resolution - CPU after compute shader buffer has been mapped over</p>
+                </div>
+            </div>
+
+            Gameplay elements
+            <div class="gallery">
+                <div class="gallery-item-half">
+                    <img src="tutorial.png">
+                    <p class="gallery-caption">Comprehensive tutorial</p>
+                </div>
+
+                <div class="gallery-item-half">
+                    <div class="nested-gallery">
+                        <div class="gallery-item-half">
+                            <img src="enemy-1.png">
+                        </div>
+                        <div class="gallery-item-half">
+                            <img src="enemy-2.png">
+                        </div>
+                    </div>
+                    <div class="nested-gallery">
+                        <div class="gallery-item-half">
+                            <img src="enemy-3.png">
+                        </div>
+                        <div class="gallery-item-half">
+                            <img src="enemy-4.png">
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Various enemies including bats, mud bubbles, spiders, and flying thumbtacks</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 Herman Muller</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

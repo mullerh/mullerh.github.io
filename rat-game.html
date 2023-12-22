@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Herman Muller</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .gallery-item-quarter {
+        padding: 1%;
+        flex-basis: calc(25% - 2%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery-item-quarter img, .gallery-item-quarter video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    .gallery-item-full {
+        flex-basis: calc(100%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery-item-full img, .gallery-item-full video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .gallery-caption {
+        margin-top: 10px;
+        color: lightslategrey;
+        font-size: 16px;
+        text-align: left;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .back-button {
+        top: 10px;
+        left: 10px;
+    }
+    .back-button a {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        font-size: 20px;
+    }
+    .back-button a:hover {
+        background-color: rebeccapurple;
+        transform: scale(1.1);
+    }
+    h3 {
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <a href="index.html">Back</a>
+        </div>
+        <section class="project">
+            <h2>3D Pixel Art Pipeline (AKA Rat Game)</h2>
+            <p>Step 1: Overhaul Unity's render system with a custem render pipeline with deffered shading!</p>
+            <div class="gallery">
+                <div class="gallery-item-quarter">
+                    <img src="deffered1.png" alt="Deffered Shading Image 1">
+                    <p class="gallery-caption">Normal pass</p>
+                </div>
+                <div class="gallery-item-quarter">
+                    <img src="deffered2.png" alt="Deffered Shading Image 2">
+                    <p class="gallery-caption">World position pass</p>
+                </div>
+                <div class="gallery-item-quarter">
+                    <img src="deffered3.png" alt="Deffered Shading Image 3">
+                    <p class="gallery-caption">Edge pass</p>
+                </div>
+                <div class="gallery-item-quarter">
+                    <img src="deffered4.png" alt="Deffered Shading Image 4">
+                    <p class="gallery-caption">Final result with edges and screen-space shadows</p>
+                </div>
+            </div>
+
+            <p>Step 2: Create lighting effects with Unity's particle system</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="lights-video.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption">Works well for 1000+ particles, but aesthetically is too much.</p>
+                </div>
+            </div>
+
+            <p>Step 3: Add water with refractions, reflections, and tone</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="water-video.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption">Also changes lights underwater.</p>
+                </div>
+            </div>
+
+            <p>Step 4: Rolling volumetric fog</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="fog-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <p>Step 5: Add the rat! Fully procedurally animated, and ground snapping movement</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="movement-video.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption">Camera snaps to discrete pixel space.</p>
+                </div>
+            </div>
+
+            <p>Step 6: Procedural grass rendering</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="grass-video.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption"> Uses compute shaders, per blade culling, chunking, Unity job/burst system, wind interaction, and player interactions. Has negligible performance impacts.</p>
+                </div>
+            </div>
+
+            <h3>What's next?</h3>
+            <p>
+                Wish list:
+                <li>Re-add shadows</li>
+                <li>Proper color palettes for cell shading</li>
+                <li>Trees</li>
+                <li>Enemies</li>
+                <li>Climbable surfaces</li>
+            </p>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 Herman Muller</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
