@@ -12,6 +12,12 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+    .nested-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     .gallery-item-quarter {
         padding: 1%;
         flex-basis: calc(25% - 2%);
@@ -19,11 +25,12 @@
         display: flex;
         flex-direction: column;
     }
-    .gallery-item-quarter img, .gallery-item-quarter video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
+    .gallery-item-half {
+        padding: 1%;
+        flex-basis: calc(50% - 2%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     .gallery-item-full {
         flex-basis: calc(100%);
@@ -34,6 +41,12 @@
     .gallery-item-full img, .gallery-item-full video {
         width: 100%;
         height: auto;
+        object-fit: cover;
+    }
+    .gallery-item-quarter img, .gallery-item-quarter video, .gallery-item-half img, .gallery-item-half video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
     }
     .gallery-caption {
@@ -144,13 +157,52 @@
                 </div>
             </div>
 
+            <p>Step 7: Add shadows back</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="shadows.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption">Grass samples from shadowed terrain for full blade shadowing</p>
+                </div>
+            </div>
+
+            <p>Step 7: God Rays - Volumetric directional lights</p>
+            <div class="gallery">
+                <div class="gallery-item-full">
+                    <video controls>
+                        <source src="god-rays.mp4" type="video/mp4">
+                    </video>
+                    <p class="gallery-caption">Shell texturing technique with planes aligned parallel to light direction and rotated towards camera. (Increased alpha channel for increased visability in demo)</p>
+                </div>
+            </div>
+
+            <p>Step 8: Day night cycle</p>
+            <div class="gallery">
+                <div class="gallery-item-half">
+                    <img src="morning.png">
+                    <p class="gallery-caption">Morning</p>
+                </div>
+                <div class="gallery-item-half">
+                    <img src="day.png">
+                    <p class="gallery-caption">Day</p>
+                </div>
+                <div class="gallery-item-half">
+                    <img src="evening.png">
+                    <p class="gallery-caption">Evening</p>
+                </div>
+                <div class="gallery-item-half">
+                    <img src="night.png">
+                    <p class="gallery-caption">Night</p>
+                </div>
+            </div>
+
             <h3>What's next?</h3>
             <p>
                 Wish list:
-                <li>Re-add shadows</li>
-                <li>Proper color palettes for cell shading</li>
+                <li>Proper color palettes using color theory</li>
                 <li>Trees</li>
-                <li>Enemies</li>
+                <li>Procedurally animated enemies</li>
                 <li>Climbable surfaces</li>
             </p>
         </section>
