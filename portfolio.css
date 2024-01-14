@@ -36,6 +36,21 @@ h2 {
     font-size: 38px;
 }
 
+.download-button a:hover {
+    background-color: #0056b3;
+}
+
+.download-button a {
+    display: inline-block;
+    background-color: #0074D9;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
 .back-button {
     top: 10px;
     left: 10px;
