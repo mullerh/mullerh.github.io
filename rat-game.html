@@ -6,75 +6,23 @@
     <title>Projects - Herman Muller</title>
     <link rel="stylesheet" href="portfolio.css">
     <style>
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .nested-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .gallery-item-quarter {
-        padding: 1%;
-        flex-basis: calc(25% - 2%);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .gallery-item-half {
-        padding: 1%;
-        flex-basis: calc(50% - 2%);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .gallery-item-full {
-        flex-basis: calc(100%);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .gallery-item-full img, .gallery-item-full video {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .gallery-item-quarter img, .gallery-item-quarter video, .gallery-item-half img, .gallery-item-half video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-    }
-    .gallery-caption {
-        margin-top: 10px;
-        color: lightslategrey;
-        font-size: 16px;
-        text-align: left;
-    }
     h2 {
         font-size: 45px;
     }
-    .back-button {
-        top: 10px;
-        left: 10px;
+
+    .download-button a:hover {
+        background-color: #0056b3;
     }
-    .back-button a {
+
+    .download-button a {
         display: inline-block;
-        padding: 15px 40px;
-        background-color: #333;
+        background-color: #0074D9;
         color: #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
         text-decoration: none;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        font-size: 20px;
-    }
-    .back-button a:hover {
-        background-color: rebeccapurple;
-        transform: scale(1.1);
     }
     h3 {
         font-size: 30px;
@@ -88,6 +36,12 @@
         </div>
         <section class="project">
             <h2>3D Pixel Art Pipeline<br>(AKA Rat Game)</h2>
+
+            <div class="download-button">
+                <a href="ratgame.zip" download="ratgame.zip">Download ZIP file</a>
+            </div>
+            <p class="gallery-caption">Controllers are supported. Tested on Windows (NVIDIA GPUs, Intel & AMD CPUs), feedback on other devices is welcome - as well as feedback in general :)</p>
+
             <p>Step 1: Overhaul Unity's render system with a custom render pipeline with deferred shading!</p>
             <div class="gallery">
                 <div class="gallery-item-quarter">

@@ -36,6 +36,76 @@ h2 {
     font-size: 38px;
 }
 
+.back-button {
+    top: 10px;
+    left: 10px;
+}
+.back-button a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 40px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+.back-button a:hover {
+    background-color: rebeccapurple;
+    transform: scale(1.1);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.nested-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.gallery-item-quarter {
+    padding: 1%;
+    flex-basis: calc(25% - 2%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.gallery-item-half {
+    padding: 1%;
+    flex-basis: calc(50% - 2%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.gallery-item-full {
+    flex-basis: calc(100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.gallery-item-full img, .gallery-item-full video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.gallery-item-quarter img, .gallery-item-quarter video, .gallery-item-half img, .gallery-item-half video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.gallery-caption {
+    margin-top: 10px;
+    color: lightslategrey;
+    font-size: 16px;
+    text-align: left;
+}
+
 #about,
 #projects,
 #contact {
