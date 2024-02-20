@@ -1,5 +1,7 @@
+@import url(https://fonts.bunny.net/css?family=dm-sans:400);
+
 body {
-    font-family: Arial;
+    font-family: 'DM Sans', sans-serif;
     line-height: 1.6;
     background-color: #001015;
     color: white;
@@ -134,9 +136,14 @@ h2 {
     margin-bottom: 20px;
     background-size: cover;
     color: white;
-    border: none;
-    border-radius: 5px;
     transition: filter 0.3s, background-color 0.2s, transform 0.2s;
+
+    border-color: #ff3246;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 5px;
+    text-align: left;
+    vertical-align: bottom;
 }
 
 #projects a:hover {

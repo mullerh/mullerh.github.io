@@ -19,15 +19,36 @@
             pointer-events: auto;
         }
         .project {
-            padding: 20px;
+            margin: 40px;
+            margin-left: 20px;
+            margin-bottom: 20px;
             font-size: 25px;
+            text-align: left;
+            display: inline-block;
+            text-shadow: 0.177rem 0.177rem 0.5rem rgba(0,0,0,0.75);
+        }
+        .project h3 {
+            margin: 0;
+            margin-top: 50px;
+        }
+        .project h4 {
+            margin: 5px 0 0;
+            font-size: 0.9em;
         }
         .button-image-1 {
-            background-image: url('rat-game-button.png');
+            background-image:
+            linear-gradient(to top right, rgba(255, 50, 0, 0.25), rgba(0, 0, 0, 0)),
+            url('rat-game-button.png');
         }
-
         .button-image-2 {
-            background-image: url('balloonium-button.png');
+            background-image:
+            linear-gradient(to top right, rgba(255, 50, 0, 0.25), rgba(0, 0, 0, 0)),
+            url('balloonium-button.png');
+        }
+        .button-image-3 {
+            background-image:
+            linear-gradient(to top right, rgba(255, 50, 0, 0.25), rgba(0, 0, 0, 0)),
+            url('repo-riot-button.png');
         }
         canvas {
             position: fixed;
@@ -37,6 +58,12 @@
             height: 100%;
             z-index: -1;
             pointer-events: auto;
+        }
+        .inspirations p {
+            margin: 0;
+        }
+        .inspirations li {
+            list-style-type: none;
         }
     </style>
 </head>
@@ -55,17 +82,36 @@
             <h2>Projects</h2>
             <a href="rat-game.html" class="button-image-1">
                 <div class="project">
-                    <h3>3D Pixel Art Pipeline<br>(AKA Rat Game)</h3>
+                    <h3>Rat Game</h3>
+                    <h4>Custom SRP 3D Pixel Art Pipeline</h4>
                 </div>
             </a>
             <a href="balloonium.html" class="button-image-2">
                 <div class="project">
-                    <h3>Custom ECS Engine<br>(AKA Balloonium)</h3>
+                    <h3>Balloonium</h3>
+                    <h4>Custom ECS Engine</h4>
+                </div>
+            </a>
+            <a href="https://usualvirtue.itch.io/reporiot" class="button-image-3">
+                <div class="project">
+                    <h3>Repo Riot</h3>
+                    <h4>2024 Global Game Jam</h4>
                 </div>
             </a>
         </section>
 
         <p>Project files available upon request</p>
+
+        <div class="inspirations">
+            <p>Creative inspirations:<br>
+                <li>t3ssel8r</li>
+                <li>Acerola</li>
+                <li>starbi</li>
+                <li>Eduardo Schildt</li>
+                <li>Voyage</li>
+                <li>David Holland</li>
+            </p>
+        </div>
 
         <section id="contact">
             <h2>Contact Me</h2>
